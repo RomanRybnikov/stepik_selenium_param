@@ -46,8 +46,6 @@ def browser(request):
             options = Options()
             options.add_experimental_option('prefs', {'intl.accept_languages': language_default})
             browser = webdriver.Chrome(options=options)
-            # joined_languages = ', '.join(supported_languages.keys())
-            # raise pytest.UsageError(f"--language is invalid, supported languages: {joined_languages}")
 
     yield browser
     print("\nQuit browser..")
